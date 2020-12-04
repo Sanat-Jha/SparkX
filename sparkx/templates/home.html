@@ -1,21 +1,37 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark X</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="icon" href="{% static 'images/logo.jpeg'%}" type="image" sizes="16x16" class="favicon">
 </head>
+
 <body>
-    <span class="topband">
-        <img src="{% static 'images/chaticon.png'%}" class="topicon">
-        <img src="{% static 'images/notificationicon.png'%}" class="topicon">
-        <img src="{% static 'images/profileicon.png'%}" class="topicon">
-        <img src="{% static 'images/settingsicon.png'%}" class="topicon">
-    </span>
-    <div class="logoholder">
-        <p class="logotext">Spark X</p>
+    <div class="header">
+        <span class="topband">
+            <img src="{% static 'images/chaticon.png'%}" class="topicon">
+            <img src="{% static 'images/notificationicon.png'%}" class="topicon">
+            <img src="{% static 'images/profileicon.png'%}" class="topicon">
+            <img src="{% static 'images/settingsicon.png'%}" class="topicon">
+        </span>
+        <div class="logoholder">
+            <p class="logotext">Spark X</p>
+        </div>
     </div>
+
+    <!-- <div class="post">
+        <img src="{% static 'images/download.jpg'%}">
+    </div>
+    <div class="post">
+        <img src="{% static 'images/download.jpg'%}">
+    </div>
+    <div class="post">
+        <img src="{% static 'images/download.jpg'%}">
+    </div> -->
 </body>
+
 </html>
