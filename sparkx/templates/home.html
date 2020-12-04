@@ -15,12 +15,18 @@
         <span class="topband">
             <img src="{% static 'images/chaticon.png'%}" class="topicon">
             <img src="{% static 'images/notificationicon.png'%}" class="topicon">
-            <img src="{% static 'images/profileicon.png'%}" class="topicon">
+            <img src="static/media/{{user.Dp}}" class="topicon">
             <img src="{% static 'images/settingsicon.png'%}" class="topicon">
         </span>
         <div class="logoholder">
             <p class="logotext">Spark X</p>
         </div>
+    </div>
+    <div class="mainarea" style="margin-top: 100px;position: absolute;">
+        <h2>Posts</h2>
+        {% for post in Posts %}
+        {{post.Caption}}<br>
+        {% endfor%}
     </div>
 
     <!-- <div class="post">

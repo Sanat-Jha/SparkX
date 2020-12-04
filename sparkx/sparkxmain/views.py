@@ -2,20 +2,28 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User as DUser
 from django.contrib.auth import authenticate,login
 from .models import User, Post
-
+import datetime
 # Create your views here.
 
 
 def home(request):
-    username = None
     if request.user.is_authenticated:
-        username = request.user.username
+        user = User.objects.get(Username=request.user.username)
+        All_Posts = Post.objects.all().order_by("date")
+        Posts = []
+        Followings = user.Following
+        for post in All_Posts:
+            temp_user = User.objects.get(Username=post.Owner)
+            Id = temp_user.Id
+            if str(Id) in Followings:
+                Posts.append(post)
+        context = {
+        "user" : user,
+        "Posts" : Posts
+        }
+        return render(request, "home.html",context)
     else:
         return redirect(loginUser)
-    context = {
-        "username" : username
-    }
-    return render(request, "home.html",context)
 
 
 def loginUser(request):
@@ -46,3 +54,12 @@ def sign_up(request):
 
         return redirect(login)
     return render(request, "sign up.html")
+
+
+def newpost(request):
+    if request.method == "POST":
+        image = request.POST.get("image")
+        caption = request.POST.get("caption")
+        post = Post(Image=image,Caption=caption,date=datetime.datetime.now())
+        post.save()
+    return render(request,"newpost.html")
