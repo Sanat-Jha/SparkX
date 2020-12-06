@@ -3,23 +3,17 @@ from django.contrib.auth.models import User as DUser
 from django.contrib.auth import authenticate,login
 from .models import User, Post
 import datetime
+import cv2
 # Create your views here.
 
 
 def home(request):
     if request.user.is_authenticated:
         user = User.objects.get(Username=request.user.username)
-        All_Posts = Post.objects.all().order_by("date")
-        Posts = []
-        Followings = user.Following
-        for post in All_Posts:
-            temp_user = User.objects.get(Username=post.Owner)
-            Id = temp_user.Id
-            if str(Id) in Followings:
-                Posts.append(post)
+        All_Posts = user.Postlist
         context = {
         "user" : user,
-        "Posts" : Posts
+        "Posts" : All_Posts
         }
         return render(request, "home.html",context)
     else:
@@ -60,6 +54,14 @@ def newpost(request):
     if request.method == "POST":
         image = request.POST.get("image")
         caption = request.POST.get("caption")
-        post = Post(Image=image,Caption=caption,date=datetime.datetime.now())
+        post = Post(Image=image,Caption=caption,date=datetime.datetime.now(),Owner=request.user.username)
         post.save()
+        user = User.objects.get(Username=request.user.username)
+        Followers = user.Followers
+        for follower in Followers:
+            temp_user = User.objects.get(Id=follower)
+            post_list = temp_user.Postlist
+            post_list.append(post.Id)
+            post_list.save()
+        return redirect("/")
     return render(request,"newpost.html")

@@ -2,7 +2,6 @@ body{
     margin: 0;
     padding: 0;
 }
-
 .logoholder{
     background-color: #1807d9;
     border-bottom-left-radius: 0.4em;
@@ -35,10 +34,20 @@ body{
     left: 18ex;
     position: relative;
 }
-.favicon{
-    border-radius: 50%;
+.circleshape{
+    border-radius: 100%;
 }
-.post{
-    top: 10ex;
-    position: relative;
+.postimage{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    /* margin-top: 20%; */
+    position: absolute;
+    margin: 20% auto;
+}
+.mainarea{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    
 }
