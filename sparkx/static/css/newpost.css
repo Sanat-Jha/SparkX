@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.logoholder{
+    background-color: #1807d9;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.7rem 0.7rem;
+    margin-left: 1em;
+    position: absolute;
+}
+.logotext{
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin: 0;
+}
+.topband{
+    margin-top: 1.05rem;
+    background-color: #0ECCB9;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+.topicon{
+    width: 5ex;
+    height: 100%;
+    padding: 0;
+    left: 20ex;
+    position: relative;
+}
+.circleshape{
+    border-radius: 100%;
+}
+
+.mainarea{
+    min-width: 50%;
+    width: fit-content;
+    height: 50%;
+    margin: 6% 25% 0% 25%;
+    position: absolute;
+}
+
+.imageUpload{
+    display: none;
+}
+.cameraIcon{
+    display: block;
+    min-width: 50%;
+    max-width: 100%;
+    margin: auto;
+    cursor: pointer;
+}
+.cameraIcon:hover{
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 2px #1807d9;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease
+}
+.caption{
+    width: 50%;
+    height: 2em;
+    margin: 0 auto;
+    display: block;
+    border-radius: 30ex;
+    text-indent: 3%;
+    margin-top: 5%;
+}
+.submit{
+    margin: auto;
+    display: block;
+    margin-top: 2%;
+    background-color: #1807d9;
+    padding: 1% 5%;
+    border: none;
+    border-radius: 20ex;
+    font-size: 150%;
+    cursor: pointer;
+}
+.submit:hover{
+    padding: 1% 10%;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease
+}
