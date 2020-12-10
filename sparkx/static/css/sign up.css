@@ -1,0 +1,62 @@
+body{
+    background-image: linear-gradient(to bottom right,#170c8fe1,rgb(123, 171, 224),#170c8fe1);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+form{
+    width: fit-content;
+    height: fit-content;
+    padding: 3% 10% 5% 2%;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.233), inset 0px 0px 10px 5px rgb(5, 217, 245);
+    display: block;
+    border: solid black 2px;
+    margin: 10% auto;
+    border-radius: 2ex;
+}
+
+input{
+    border-radius: 5ex;
+    box-shadow: 0px 0px 10px 5px white;
+    display: block;
+    border: none;
+    width: 130%;
+    height: 2em;
+    background-color: black;
+    margin-bottom: 5%;
+    color: white;
+    text-indent: 2%;
+    font-size: 1em;
+    padding: 2%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* inpupt:focus{ */
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.233);
+}
+p{
+    font-family: serif;
+    font-style: ;
+    font-size: 3em;
+    margin: 5% 50%;
+    padding: 0;
+}   
+button{
+    padding: 2% 4%;
+    background: linear-gradient(rgb(4, 41, 252),rgba(0, 0, 0, 0.363));
+    border:none;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.233);
+    color: white;
+    border-radius: 0.5ex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    margin-left: 5%;
+    margin-top: 3%;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 0px 0px 10px 5px black;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease
+}
