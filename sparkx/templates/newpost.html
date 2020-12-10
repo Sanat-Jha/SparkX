@@ -8,10 +8,10 @@
     <title>Spark X- New Post</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/newpost.css' %}">
 
-<script class="jsbin" src="{% static 'js/jquery.js' %}"></script>
+    <script class="jsbin" src="{% static 'js/jquery.js' %}"></script>
     <link rel="icon" href="{% static 'images/favicon123.png'%}" type="image" sizes="16x16" class="favicon">
     <script>
-             function readURL(input) {
+        function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 
@@ -36,11 +36,9 @@
         </div>
     </div>
     <div class="mainarea">
-        <form action="" method="post">{% csrf_token %}
-            <input type="file" name="imageee" id="image" accept="image/*" class="imageUpload" onchange="readURL(this);"/>
-            <label for="image"><img src="{% static 'images/camera icon.png' %}" class="cameraIcon" id="blah"></label>
-            
-            <input type="text" name="caption" placeholder="Caption...   " class="caption">
+        <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+            {% csrf_token %}
+            {{ form.as_p }}
             <button type="submit" class="submit">Post</button>
         </form>
     </div>
