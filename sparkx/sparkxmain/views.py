@@ -54,21 +54,18 @@ def sign_up(request):
 
 def newpost(request):
     if request.method == "POST":
-        form = POST(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('/') 
-        # image = request.POST.get("image")
-        # caption = request.POST.get("caption")
-        # post = Post(Image=image,Caption=caption,Owner=request.user.username)
-        # post.save()
-        # user = User.objects.get(Username=request.user.username)
-        # Followers = user.Followers
-        # for follower in Followers:
-        #     temp_user = User.objects.get(Id=follower)
-        #     post_list = temp_user.Postlist
-        #     post_list.append(post.Id)
-        #     temp_user.save()
-        # return redirect("/")
+        image = request.FILES["image"]
+        caption = request.POST.get("caption")
+        print()
+        post = Post(Image=image,Caption=caption,Owner=request.user.username)
+        post.save()
+        user = User.objects.get(Username=request.user.username)
+        Followers = user.Followers
+        for follower in Followers:
+            temp_user = User.objects.get(Id=follower)
+            post_list = temp_user.Postlist
+            post_list.append(post.Id)
+            temp_user.save()
+        return redirect("/")
     form = POST() 
     return render(request,"newpost.html", {'form' : form})

@@ -36,10 +36,14 @@
         </div>
     </div>
     <div class="mainarea">
-        <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+        <form action="" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="submit">Post</button>
+            <input type="file" name="image" accept="image/*" id="image" class="imageUpload" onchange="readURL(this);"/>
+            <label for="image" >
+                <img src="{% static 'images/camera icon.png' %}" class="cameraIcon" id="blah">
+            </label>
+                <input type="text" class="caption" placeholder=" Caption..." name="caption">
+                <button type="submit" class="submit">Post</button>
         </form>
     </div>
 </body>
