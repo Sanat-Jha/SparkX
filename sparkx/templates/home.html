@@ -14,7 +14,8 @@
     <div class="header">
         <span class="topband">
             <a href="/newpost"><img src="{% static 'images/plus icon.png'%}" class="topicon"></a>
-            <img src="{% static 'images/notificationicon.png'%}" class="topicon">
+            <a href="/notifications"><img src="{% static 'images/notificationicon.png'%}" class="topicon">
+            </a>
             <img src="static/media/{{user.Dp}}" class="  topicon circleshape">
             <img src="{% static 'images/settingsicon.png'%}" class="topicon">
         </span>
@@ -23,7 +24,7 @@
         </div>
     </div>
     <div class="mainarea">
-    {% for post in Posts %}
+        {% for post in Posts %}
         <div class="post">
             <div class="dp">
                 <img src="{% static 'media/DPs/tu1.png' %}" class="dpImage">

@@ -69,3 +69,6 @@ def newpost(request):
         return redirect("/")
     form = POST() 
     return render(request,"newpost.html", {'form' : form})
+
+def notifications(request):
+    return render(request,"notification.html")
