@@ -15,8 +15,7 @@
     <div class="header">
         <span class="topband">
             <a href="/newpost"><img src="{% static 'images/plus icon.png'%}" class="topicon"></a>
-            <a href="/notifications"><img src="{% static 'images/notificationicon.png'%}" class="topicon">
-            </a>
+            <a href="/notifications"><img src="{% static 'images/notificationicon.png'%}" class="topicon">            </a>
             <a href="/profile"><img src="static/media/{{user.Dp}}" class="  topicon circleshape"></a>
             <a href="/settings"><img src="{% static 'images/settingsicon.png'%}" class="topicon"></a>
             <img src="{% static 'images/searchicon.png'%}" class="topicon" onclick="search()">
@@ -67,8 +66,8 @@
         {% endfor %}
     </div>
     <div class="search" id="search">
-            <input type="text" placeholder="Search"/>
-            <button type="submit">z</button>
+            <input type="text" class="searchinput" Id="searchinput" placeholder="Search"/>
+            <button type="submit" class="searchsubmit" id="searchsubmit">Search</button>
     </div>
 </body>
 

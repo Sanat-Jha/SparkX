@@ -1,6 +1,5 @@
 function search(){
-    console.log("we are here");
-    Search = document.getElementById("search");
-    Search.style.animationName = "searchanimation";
-    console.log("we are now here")
+    document.getElementById("search").style.animationName = "searchanimation";
+    document.getElementById("searchinput").style.display = "block";
+    document.getElementById("searchsubmit").style.display = "block";
 }

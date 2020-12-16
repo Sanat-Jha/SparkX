@@ -108,3 +108,15 @@ body{
         height: 100%;
     }
 }
+.searchinput{
+    display: none;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    display: none;
+}
+.searchsubmit{
+    
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    display: none;
+}
