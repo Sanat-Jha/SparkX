@@ -33,6 +33,7 @@ body{
     padding: 0;
     left: 18ex;
     position: relative;
+    cursor: pointer;
 }
 .circleshape{
     border-radius: 100%;
@@ -90,4 +91,20 @@ body{
 }
 .curveLine{
     width: 100%;
+}
+.search{
+    animation-duration: 4s;
+    width: 100%;
+    background-color: blue;
+    position: absolute;
+    animation-fill-mode: forwards;
+    opacity: 80%;
+}
+@keyframes searchanimation{
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
 }

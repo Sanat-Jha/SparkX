@@ -14,7 +14,7 @@ def home(request):
         All_Posts = []
 
         for post in Posts_ids:
-            All_Posts.append(Post.objects.get(Id=post))
+            All_Posts.append( Post.objects.get( Id = post ) )
 
         context = {
             "user": user,

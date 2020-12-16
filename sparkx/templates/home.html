@@ -8,6 +8,7 @@
     <title>Spark X</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
     <link rel="icon" href="{% static 'images/favicon.png'%}" type="image" sizes="16x16" class="favicon">
+    <script src="{% static 'js/home.js' %}"></script>
 </head>
 
 <body>
@@ -16,8 +17,9 @@
             <a href="/newpost"><img src="{% static 'images/plus icon.png'%}" class="topicon"></a>
             <a href="/notifications"><img src="{% static 'images/notificationicon.png'%}" class="topicon">
             </a>
-            <img src="static/media/{{user.Dp}}" class="  topicon circleshape">
-            <img src="{% static 'images/settingsicon.png'%}" class="topicon">
+            <a href="/profile"><img src="static/media/{{user.Dp}}" class="  topicon circleshape"></a>
+            <a href="/settings"><img src="{% static 'images/settingsicon.png'%}" class="topicon"></a>
+            <img src="{% static 'images/searchicon.png'%}" class="topicon" onclick="search()">
         </span>
         <div class="logoholder">
             <p class="logotext">Spark X</p>
@@ -63,6 +65,10 @@
             </svg>
         </div>
         {% endfor %}
+    </div>
+    <div class="search" id="search">
+            <input type="text" placeholder="Search"/>
+            <button type="submit">z</button>
     </div>
 </body>
 
