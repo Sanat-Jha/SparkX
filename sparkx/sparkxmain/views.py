@@ -54,11 +54,7 @@ def sign_up(request):
         email = request. POST. get("email")
         password = request. POST. get("password")
 
-        auth_user = Auth_User.objects.create_user(
-            username,
-            email,
-            password
-        )
+        auth_user = Auth_User.objects.create_user(username,email,password)
         auth_user.save()
 
         user = User(
